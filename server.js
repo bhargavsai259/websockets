@@ -10,6 +10,8 @@ wss.on("connection",(socket)=>{
 
     socket.send("connected");
 
-   
+    socket.on("message",(msg)=>{
+        console.log("message i got from client",msg.toString())
+    })
 
 })
